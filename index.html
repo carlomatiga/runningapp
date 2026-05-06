@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaceMates Running Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary">
+      <a class="brand" href="#" aria-label="PaceMates home">
+        <span class="brand-mark">PM</span>
+        <span>
+          <strong>PaceMates</strong>
+          <small>Run together</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a class="active" href="#dashboard" aria-current="page">
+          <span aria-hidden="true">H</span>
+          Dashboard
+        </a>
+        <a href="#runs">
+          <span aria-hidden="true">R</span>
+          Runs
+        </a>
+        <a href="#routes">
+          <span aria-hidden="true">M</span>
+          Routes
+        </a>
+        <a href="#crew">
+          <span aria-hidden="true">C</span>
+          Crew
+        </a>
+      </nav>
+
+      <div class="profile-card">
+        <div class="avatar">CH</div>
+        <div>
+          <strong>Carlo H.</strong>
+          <span>152 km this month</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="workspace" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Tuesday club board</p>
+          <h1>Find your next run and the people to run it with.</h1>
+        </div>
+        <button class="primary-action" type="button">
+          <span aria-hidden="true">+</span>
+          Create Run
+        </button>
+      </header>
+
+      <section class="hero-panel" aria-label="Community snapshot">
+        <div class="hero-copy">
+          <span class="status-pill">Live in Perth</span>
+          <h2>Sunset tempo crew leaves in 42 minutes</h2>
+          <p>Meet at Elizabeth Quay for a social warm-up, three steady blocks, and coffee planning after.</p>
+          <div class="hero-actions">
+            <button type="button">Join Run</button>
+            <button class="secondary" type="button">View Route</button>
+          </div>
+        </div>
+
+        <div class="route-visual" aria-label="Animated river route preview">
+          <div class="sun"></div>
+          <svg viewBox="0 0 420 260" role="img" aria-labelledby="route-title route-desc">
+            <title id="route-title">Route preview</title>
+            <desc id="route-desc">A stylized running route crossing river paths and city blocks.</desc>
+            <path class="river" d="M-10 182 C 62 120, 120 226, 190 164 S 310 118, 430 178" />
+            <path class="streets" d="M28 54 H382 M58 28 V224 M142 36 V220 M232 28 V230 M328 44 V218 M32 112 H380 M42 214 H356" />
+            <path class="route-line" d="M54 204 C80 168, 112 155, 139 162 C182 174, 186 104, 229 94 C274 84, 297 126, 338 101 C363 86, 377 68, 390 50" />
+            <circle class="route-start" cx="54" cy="204" r="8" />
+            <circle class="route-end" cx="390" cy="50" r="8" />
+            <circle class="runner-dot" cx="54" cy="204" r="7" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="stats-row" aria-label="Community stats">
+        <article>
+          <span>Weekly distance</span>
+          <strong>1,284 km</strong>
+          <small>+18% from last week</small>
+        </article>
+        <article>
+          <span>Runs hosted</span>
+          <strong>37</strong>
+          <small>12 beginner friendly</small>
+        </article>
+        <article>
+          <span>Active runners</span>
+          <strong>428</strong>
+          <small>64 checked in today</small>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel" id="runs" aria-labelledby="runs-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Upcoming</p>
+              <h2 id="runs-title">Group Runs</h2>
+            </div>
+            <div class="segmented-control" aria-label="Run filter">
+              <button class="selected" type="button">All</button>
+              <button type="button">Easy</button>
+              <button type="button">Fast</button>
+            </div>
+          </div>
+
+          <div class="run-list">
+            <article class="run-item">
+              <time datetime="18:15">6:15 PM</time>
+              <div>
+                <h3>Sunset Tempo</h3>
+                <p>8.4 km - 5:00-5:20 pace - Elizabeth Quay</p>
+              </div>
+              <button type="button">Join</button>
+            </article>
+            <article class="run-item">
+              <time datetime="06:00">6:00 AM</time>
+              <div>
+                <h3>Lake Loop Easy</h3>
+                <p>5.2 km - conversational - Hyde Park</p>
+              </div>
+              <button type="button">Join</button>
+            </article>
+            <article class="run-item">
+              <time datetime="07:30">7:30 AM</time>
+              <div>
+                <h3>Long Run Social</h3>
+                <p>16 km - regroup stops - Cottesloe Beach</p>
+              </div>
+              <button type="button">Join</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel route-card" id="routes" aria-labelledby="route-card-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Featured</p>
+              <h2 id="route-card-title">Swan River 10K</h2>
+            </div>
+            <span class="difficulty">Rolling</span>
+          </div>
+          <div class="mini-map">
+            <span class="map-pin start">Start</span>
+            <span class="map-pin finish">Finish</span>
+          </div>
+          <dl class="route-details">
+            <div>
+              <dt>Distance</dt>
+              <dd>10.1 km</dd>
+            </div>
+            <div>
+              <dt>Elevation</dt>
+              <dd>64 m</dd>
+            </div>
+            <div>
+              <dt>Surface</dt>
+              <dd>Path</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="panel" aria-labelledby="feed-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Live Feed</p>
+              <h2 id="feed-title">Club Energy</h2>
+            </div>
+          </div>
+
+          <div class="feed">
+            <article>
+              <div class="avatar warm">MS</div>
+              <p><strong>Mia</strong> posted photos from the bridge repeats and tagged 9 runners.</p>
+            </article>
+            <article>
+              <div class="avatar cool">AJ</div>
+              <p><strong>Arjun</strong> opened a recovery jog for tomorrow morning.</p>
+            </article>
+            <article>
+              <div class="avatar green">LT</div>
+              <p><strong>Leah</strong> earned the monthly consistency badge.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel crew-panel" id="crew" aria-labelledby="crew-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Crew</p>
+              <h2 id="crew-title">People Nearby</h2>
+            </div>
+          </div>
+
+          <div class="crew-list">
+            <article>
+              <div class="avatar warm">NV</div>
+              <div>
+                <strong>Nina V.</strong>
+                <span>Trail, 6:00 pace</span>
+              </div>
+            </article>
+            <article>
+              <div class="avatar cool">TK</div>
+              <div>
+                <strong>Tom K.</strong>
+                <span>Marathon block</span>
+              </div>
+            </article>
+            <article>
+              <div class="avatar green">EP</div>
+              <div>
+                <strong>Elle P.</strong>
+                <span>Beginner host</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
